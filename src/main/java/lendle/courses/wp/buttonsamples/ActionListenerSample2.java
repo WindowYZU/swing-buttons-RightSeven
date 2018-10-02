@@ -6,6 +6,8 @@
 package lendle.courses.wp.buttonsamples;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
@@ -27,6 +29,14 @@ public class ActionListenerSample2 {
         frame.setLayout(new FlowLayout());
         
         JButton button=new JButton("click");
+        
+        
+        button.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {     
+                System.out.println("clicked");
+            } 
+        });
         //將 sample1 改成用 anonymous class
         //加入 JOptionPane.showMessageDialog(null, "HelloWorld");
         
